@@ -171,10 +171,10 @@ void stringlist_printf(stringlist_t stringlist, const char* sep, const char* end
         printf("\"");
         for(size_t j=0;j<strlen(stringlist.strings[i]);j++) {
             if(stringlist.strings[i][j] == '\n') {
-                printf("\\n", stdout);
+                printf("\\n");
                 continue;
             } else if(stringlist.strings[i][j] == '\r') {
-                printf("\\r", stdout);
+                printf("\\r");
                 continue;
             }
             putchar(stringlist.strings[i][j]);
