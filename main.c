@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
         SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_RESIZABLE);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     TTF_Font* font = TTF_OpenFont("Roboto-Black.ttf", 20);
-    file_t file = file_open("test.csv", "r");
+    file_t file = file_open("tests/test.csv", "r");
     stringlist_t lines = file_readlines(&file);
     stringarray_list_t stringarray_list = {0};
     file_close(&file);
