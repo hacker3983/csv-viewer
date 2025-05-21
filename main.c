@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     for(size_t i=0;i<lines.count;i++) {
         stringlist_t list = string_split(lines.strings[i], ",");
         for(size_t j=0;j<list.count;j++) {
-            char* stripped_string = string_strip(list.strings[j], " \"\n");
+            char* stripped_string = string_strip(list.strings[j], " \"\r\n");
             free(list.strings[j]);
             list.strings[j] = stripped_string;
         }
