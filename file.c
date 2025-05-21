@@ -60,7 +60,11 @@ void file_seek(file_t* file, long offset, int whence) {
 }
 
 void file_close(file_t* file) {
+    if(!file->stream) {
+        return;
+    }
     fclose(file->stream);
+    file->stream = NULL;
 }
 
 void file_destroy(file_t* file) {
